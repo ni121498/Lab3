@@ -33,7 +33,9 @@ class Invoice:
             userInput = input(input_value)
             if userInput in ['y', 'n']:
                 return userInput
-            print("y or n! Try again.")
+            else:
+                print("y or n! Try again.")
+                return False
 
     def inputNumber(self, input_value):
         while True:
@@ -41,6 +43,7 @@ class Invoice:
                 userInput = float(input(input_value))
             except ValueError:
                 print("Not a number! Try again.")
+                return False
                 continue
             else:
                 return userInput
